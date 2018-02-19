@@ -2787,7 +2787,7 @@ input.checkbox:checked:after {
   margin: 0 0 20px;
   padding: 10px 15px;
   box-sizing: border-box;
-  font-wieght: 400;
+  font-weight: 400;
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
   font-size:14px;
@@ -4817,4 +4817,10 @@ input.checkbox:checked:after {
 		background: url(../images/cart.png) no-repeat 105px 5px;
 		font-size: 13px;
 	}
+}
+
+/* Error section and 404 */
+.error-section{
+	margin-left: 10px;
+	padding: 10px;
 }
