@@ -1,0 +1,296 @@
+extends layout
+
+block content
+  div.banner
+    div.w3l_banner_nav_left
+      nav.navbar.nav_bottom
+        //- Brand and toggle get grouped together
+        div.navbar-header.nav_2
+          button.navbar-toggle.collapsed.navbar-toggle1(type="button", data-toggle="collapse", data-target="#bs-megadropdown-tabs")
+            span.sr-only Toggle Navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+        div(id="bs-megadropdown-tabs", class="collapse navbar-collapse")
+          ul.nav.navbar-nav.nav_1
+            li  
+              a(href="/products") Branded Foods
+            li
+              a(href="/household") Households
+            li.dropdown.mega-dropdown.active
+              a.dropdown-toggle(href="#", data-toggle="dropdown") Veggies & Fruits
+                span.caret
+              div.dropdown-menu.mega-dropdown-menu.w3ls_vegetables_menu
+                div.w3ls_vegetables
+                  ul  
+                    li  
+                      a(href="/vegetables") Vegetables
+                    li
+                      a(href="/vegetables") Fruits
+            li  
+              a(href="/kitchen") Kitchen
+            li
+              a(href="/short-codes") Short Codes
+            li.dropdown
+              a.dropdow-toggle(href="#", data-toggle="dropdown") Beverages
+                span.caret
+              div.dropdown-menu.mega-dropdown-menu.w3ls_vegetables_menu
+                div.w3ls_vegetables
+                  ul  
+                    li
+                      a(href="/drinks") Soft Drinks
+                    li 
+                      a(href="/drinks") Juices
+            li
+              a(href="/pet") Pet Food
+            li.dropdown
+              a.dropdown-toggle(href="#", data-toggle="dropdown") Frozen Foods
+                span.caret
+              div.dropdown-menu.mega-dropdown-menu.w3ls_vegetables_menu
+                div.w3ls_vegetables
+                  ul  
+                    li
+                      a(href="/frozen") Frozen Snacks
+                    li 
+                      a(href="/frozen") Frozen Nonveg
+            li
+              a(href="/bread") Bread & Bakery
+    div.w3l_banner_nav_right
+      section.slider
+        div.flexslider
+          ul.slides 
+            li
+              div.w3l_banner_nav_right_banner
+                h3 Make your <span>Food</span> with spice
+                div.more
+                  a.button--saqui.button--round-1.button--text-thick(href="/products", data-text="Shop Now") Shop Now
+            li
+              div.w3l_banner_nav_right_banner1
+                 h3 Make your <span>Food</span> with spice
+                 div.more
+                  a.button--saqui.button--round-1.button--text-thick(href="/products", data-text="Shop Now") Shop Now
+            li
+              .w3l_banner_nav_right_banner2
+                h3 upto <i>50%</i> off.
+                .more
+                  a.button--saqui.button--round-1.button--text-thick(href="/products",data-text="Shop Now") Shop Now
+      link(rel="stylesheet", href="/stylesheets/flexslider.css")
+      script(src="/javascripts/jquery.flexslider.js")
+      script.
+        $(window).load(function(){
+          $(".flexslider").flexslider({
+            animation: "slide", start: function(slider){
+              $("body").removeClass("loading");
+            }
+          });
+        });
+    .clearfix
+  .banner-bottom
+    .wthree_banner_bottom_left_grid_sub
+    .wthree_banner_bottom_left_grid_sub1
+      .col-md-4.wthree_banner_bottom_left
+        .wthree_banner_bottom_left_grid
+          img.img-responsive(src="/images/4.jpg", alt=" place alt text")
+          .wthree_banner_bottom_left_grid_pos
+            h4 Discount Offer 
+              span 25%
+      .col-md-4.wthree_banner_bottom_left
+        div.wthree_banner_bottom_left_grid
+          img.img-responsive(src="/images/5.jpg", alt="place alt text")
+          .wthreebanner_btm_pos
+            h3 introducing 
+              span best store for <i>groceries</i>
+      .col-md-4.wthree_banner_bottom_left
+        .wthree_banner_left_grid
+          img.img-responsive(src="/images/6.jpg", alt="place alt text")
+          .wthree_banner_btm_pos1
+            <h3>Save <span>Upto</span>$10</h3>
+      .clearfix
+    .clearfix
+  .top-brands
+    .container
+      h3 Hot Offers
+      .agile_top_brands_grids
+        .col-md-3.top_brand_left
+          .hover14.column
+            .agile_topbrand_left_grid
+              .agile_top_brand_left_grid
+                .tag
+                  img.img-responsice(src="/images/tag.png", alt="place alt text")
+                .agile_top_brand_left_grid1
+                  figure
+                    .snipcart-item.block
+                      .snipcart-thumb
+                        a(href="/single")
+                          img(src="/images/1.png", alt="")
+                        p fortune sunflower oil
+                        h4 $7.99 
+                          span $10.00
+                      .snipcart-details.top_brand_home_details
+                        form(action="/checkout", method="post")
+                          fieldset
+                            input(type="hidden", name="cmd", value="_cart")
+                            input(type="hidden", name="add", value="1")
+                            input(type="hidden", name="businsess", value="2")
+                            input(type="hidden", name="item_name", value=" ")
+                            input(type="hidden", name="amount", value="7.99")
+                            input(type="hidden", name="discount_amount", value="1.00")
+                            input(type="hidden", name="currency_code", value="USD")
+                            input(type="hidden", name="return", value=" ")
+                            input(type="hidden", name="cancel_return", value=" ")
+                            input.button(type="submit", value="Add to cart", name="submit")
+        .col-md-3.top_brand_left
+          .hober14.column
+            .agile_top_brand_left_grid
+              .agile_top_brand_left_grid1
+                figure
+                  .snipcart-item.block
+                    .snipcart-thumb
+                      a(href="/single")
+                        img(src="/images/3.png", alt="place alt text")
+                      p basmati rice (5 kg)
+                      h4 $11.99 
+                        span $15.00
+                    .snipcart-details.top_brand_home_details
+                      form(action="#", method="post")
+                        fieldset
+                          input(type="hidden", name="cmd", value="_cart")
+                          input(type="hidden", name="add", value="1")
+                          input(type="hidden", name="business", value=" ")
+                          input(type="hidden", name="item_name", value="basmati rice")
+                          input(type="hidden", name="amount", value="11.99")
+                          input(type="hidden", name="discount_amount", value="1.00")
+                          input(type="hidden", name="currency_code", value="USD")
+                          input(type="hidden", name="return", value=" ")
+                          input(type="hidden", name="cancel_return", value=" ")
+                          input.button(type="submit", value="Add to cart", name="submit")
+        .col-md-3.top_brand_left
+          .hober14.column
+            .agile_top_brand_left_grid
+              .agile_top_brand_left_grid1
+                figure
+                  .snipcart-item.block
+                    .snipcart-thumb
+                      a(href="/single")
+                        img(src="/images/2.png", alt="place alt text")
+                      p Pepsi soft drink (2 Ltr)
+                      h4 $8.99 
+                        span $10.00
+                    .snipcart-details.top_brand_home_details
+                      form(action="#", method="post")
+                        fieldset
+                          input(type="hidden", name="cmd", value="_cart")
+                          input(type="hidden", name="add", value="1")
+                          input(type="hidden", name="business", value=" ")
+                          input(type="hidden", name="item_name", value="Pepsi")
+                          input(type="hidden", name="amount", value="8.00")
+                          input(type="hidden", name="discount_amount", value="1.00")
+                          input(type="hidden", name="currency_code", value="USD")
+                          input(type="hidden", name="return", value=" ")
+                          input(type="hidden", name="cancel_return", value=" ")
+                          input.button(type="submit", value="Add to cart", name="submit")
+        .col-md-3.top_brand_left
+          .hober14.column
+            .agile_top_brand_left_grid
+              .agile_top_brand_left_grid1
+                figure
+                  .snipcart-item.block
+                    .snipcart-thumb
+                      a(href="/single")
+                        img(src="/images/4.png", alt="place alt text")
+                      p Dog food (4 kg)
+                      h4 $9.00
+                        span $11.00
+                    .snipcart-details.top_brand_home_details
+                      form(action="#", method="post")
+                        fieldset
+                          input(type="hidden", name="cmd", value="_cart")
+                          input(type="hidden", name="add", value="1")
+                          input(type="hidden", name="business", value=" ")
+                          input(type="hidden", name="item_name", value="dog food")
+                          input(type="hidden", name="amount", value="9.00")
+                          input(type="hidden", name="discount_amount", value="1.00")
+                          input(type="hidden", name="currency_code", value="USD")
+                          input(type="hidden", name="return", value=" ")
+                          input(type="hidden", name="cancel_return", value=" ")
+                          input.button(type="submit", value="Add to cart", name="submit")
+        .clearfix
+  .fresh-vegetables
+    .container
+      h3 Top Products
+      .w3l_fresh_vegetables_grids
+        div.col-md-3.w3l_fresh_vegetables_grid.w3l_fresh_vegetables_grid_left
+          .w3l_fresh_vegetables_grid2
+            ul
+              li
+                i.fa.fa-check(aria-hidden="true")          
+                a(href="/products") All Brands
+              li
+                i.fa.fa-check(aria-hidden="true")          
+                a(href="/products") Vegetables
+              li
+                i.fa.fa-check(aria-hidden="true")          
+                a(href="/products") Fruits
+              li
+                i.fa.fa-check(aria-hidden="true")          
+                a(href="/products") Juices
+              li
+                i.fa.fa-check(aria-hidden="true")          
+                a(href="/products") Pet Food
+              li
+                i.fa.fa-check(aria-hidden="true")          
+                a(href="/products") Bread & Bakery
+              li
+                i.fa.fa-check(aria-hidden="true")          
+                a(href="/products") Cleaning
+              li
+                i.fa.fa-check(aria-hidden="true")          
+                a(href="/products") Spices
+              li
+                i.fa.fa-check(aria-hidden="true")          
+                a(href="/products") Dry Fruits
+              li
+                i.fa.fa-check(aria-hidden="true")          
+                a(href="/products") Dairy Products
+        .col-md-9.w3l_fresh_vegetables_grid_right
+          .col-md-4.w3l_fresh_vegetables_grid
+            .w3l_fresh_vegetables_grid1
+              img.img-responsive(src="/images/8.jpg", alt="")
+          .col-md-4.w3l_fresh_vegetables_grid
+            .w3l_fresh_vegetables_grid1
+              .w3l_fresh_vegetables_grid1_rel
+                img.img-responsive(src="/images/7.jpg", alt="")
+                .w3l_fresh_vegetables_grid1_rel_pos
+                  .more.m1
+                    a.button--saqui.button--round-1.button--text-thick(href="/products", data-text="Shop now") Shop now
+            .w3l_fresh_vegetables_grid1_bottom
+              img.img-responsive(src="/images/10.jpg", alt="place alt text")
+              .w3l_fresh_vegetables_grid1_bottom_pos
+                h5 Special Offers
+          div.col-md-4.w3l_fresh_vegetables_grid
+            .w3l_fresh_vegetables_grid1
+              img.img-responsive(src="/images/9.jpg", alt="")
+            .w3l_fresh_vegetables_grid1_bottom
+              img.img-responsive(src="/images/11.jpg", alt="")
+          .clearfix
+          .agileinfo_move_text
+            .agileinfo_marquee
+              h4 get <span class="blink_me">25% off</span> on first order and also get gift voucher</h4>
+            .agileinfo_breaking_news
+              span
+            .clearfix
+        .clearfix
+  .newsletter
+    .container
+      .w3agile_newsletter_left
+        h3 sign up for our newsletter
+      .w3agile_newsletter_right
+        form(action="#", method="post")
+          input(type="email", name="Email",value="Email", onfocus="this.value = '';", onblur="if (this.value == '') {this.value = 'Email';}" ,required="")
+          input(type="submit", value="subscribe now")
+      .clearfix
+
+
+                
+                  
+                  
