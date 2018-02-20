@@ -4,6 +4,14 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var mongoose = require("mongoose");
+
+// Database connection
+var mongoDB = "mongodb://localhost:27017/uganda_store_users";
+mongoose.connect(mongoDB);
+mongoose.Promise = global.Promise;
+var db = mongoose.connection;
+db.on("error", console.error.bind(console, "MongoDB connection error"));
 
 var index = require('./routes/index');
 var users = require('./routes/users');
@@ -39,7 +47,7 @@ app.use('/', index);
 app.use('/users', users);
 app.use("/events", events);
 app.use("/login", login);
-app.use("/logout", login);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
